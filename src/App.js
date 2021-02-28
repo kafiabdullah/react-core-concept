@@ -37,6 +37,7 @@ function App(){
       <header className="App-header">
         <h1>React Component Creating</h1>
         <Person name="kafi Abdullah" job="web Developer"></Person>
+        <Person name="Tareq Mahmud" job="web Developer"></Person>
        
       </header>
     </div>
