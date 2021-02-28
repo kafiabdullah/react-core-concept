@@ -36,14 +36,16 @@ function App(){
     <div className="App">
       <header className="App-header">
         <h1>React Component Creating</h1>
-        <Person></Person>
+        <Person name="kafi Abdullah" job="web Developer"></Person>
+       
       </header>
     </div>
   )
 }
 
 
-function Person(){
+function Person(props){
+  
   let personStyle={
     border: "2px solid green",
     margin: "10px",
@@ -54,8 +56,8 @@ function Person(){
   }
   return (
   <div style={personStyle}> 
-    <h1>Name: Md.Abdullah</h1>
-    <h3>Web Developer</h3>
+    <h1>Name: {props.name}</h1>
+    <h3>Profession: {props.job} </h3>
   </div>
   )
 }
