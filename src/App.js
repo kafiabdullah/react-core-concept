@@ -32,9 +32,18 @@ import './App.css';
 // }
 
 function App(){
+  const product= [
+    {name: 'Photoshop' ,price: '$99.99'},
+    {name: 'PDF Reader' ,price: '$10.99'},
+    {name: 'Illastator' ,price: '$40.99'}
+  ]
   return(
     <div className="App">
       <header className="App-header">
+    <h1>Shopping Cart</h1>
+      <Products name={product[0]}></Products>
+      <Products name={product[1]}></Products>
+      <Products name={product[2]}></Products>
         <h1>React Component Creating</h1>
         <Person name="kafi Abdullah" job="web Developer"></Person>
         <Person name="Tareq Mahmud" job="web Developer"></Person>
@@ -44,6 +53,29 @@ function App(){
   )
 }
 
+// add product card
+function Products(props) {
+  const productStyle={
+    backgroundColor: '#d3d3d3',
+    border: '1px solid green',
+    borderRadius: '10px',
+    height: '200px',
+    width: '200px',
+    margin: '10px',
+    padding: '10px',
+    color: 'black',
+    float: 'left'
+  }
+  const {name, price} = props.name;
+  console.log(name, price);
+  return(
+    <div style={productStyle}>
+      <h2>{name}</h2>
+      <h3>{price}</h3>
+      <button>Buy Now</button>
+    </div>
+  )
+}
 
 function Person(props){
   
